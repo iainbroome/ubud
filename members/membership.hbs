@@ -1,0 +1,50 @@
+{{!< ../default}}
+
+{{#contentFor 'title'}}{{t 'Premium Membership'}}{{/contentFor}}
+
+<div class='o-grid'>
+  <div class='o-grid__col o-grid__col--center o-grid__col--3-4-m o-grid__col--2-3-l'>
+    <div class='c-archive c-archive--no-border'>
+      <h1 class='c-archive__title'>{{t 'Premium Membership'}}</h1>
+      <p class='c-archive__description'>{{t 'Unlock full access to {siteTitle} and see the entire library of members-only content.' siteTitle=@site.title}}</p>
+    </div>
+  </div>
+</div>
+
+
+<div class='o-grid'>
+  <div class='o-grid__col o-grid__col--center o-grid__col--3-4-m o-grid__col--2-3-l'>
+          <section class='c-content'>
+      
+              <h2>Title goes here</h2>
+
+<p>Sed eget dapibus neque. Mauris <a href="http://iainbroome.com">tempor nulla sit amet</a> arcu placerat nec interdum velit commodo. Etiam eu orci ac tortor sollicitudin auctor. Quisque varius sapien lacus. </p>
+              
+                    </section>
+         
+    {{> membership-plans }}
+
+    {{#unless @member}}
+      <p class='u-mt-32 u-type-xs u-type-500'>{{t 'Already have an account?'}} <a href='{{ @site.url }}/signin/' class='u-link'>{{t 'Log in'}}</a></p>
+    {{/unless}}
+
+      
+                <section class='c-content'>
+<h2>Title here</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis velit a dui porttitor sit amet commodo felis lobortis.</p>
+      
+      <p>Vestibulum tristique, ligula eu cursus interdum, nunc tortor egestas risus, a fringilla nibh enim vitae tellus. </p>
+
+<p>Sed eget dapibus neque. Mauris <a href="http://iainbroome.com">tempor nulla sit amet</a> arcu placerat nec interdum velit commodo. Etiam eu orci ac tortor sollicitudin auctor. Quisque varius sapien lacus. </p>
+
+<h2>Title goes here</h2>                    
+<p>Cras cursus orci sit amet urna bibendum suscipit. Aliquam erat volutpat. Aenean pharetra, ligula vitae sagittis viverra, lacus risus tincidunt sem, ac vulputate neque dui sed felis. </p>
+                    
+                          <div class='member-pull'>
+          <h2 class="member-pull-title">Common questions</h2>
+      <p class='member-pull-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis velit a dui porttitor sit amet commodo felis lobortis. Vestibulum tristique, ligula eu cursus interdum, nunc tortor egestas risus, a fringilla nibh enim vitae tellus. </p>
+       </div>
+      
+      </section>
+  </div>
+</div>

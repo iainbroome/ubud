@@ -1,0 +1,18 @@
+<h3><span id="cove-count"></span> Comments</h3>
+
+{{#if @member}}
+  <div id="cove"></div>
+  <p>Signed in as {{@member.email}} · <a href="javascript:" data-members-signout>Sign out</a></p>
+{{else}}
+  <p><a href="#/portal/signup">Sign in or subscribe</a> to read and leave comments.<br>
+{{/if}}
+
+<script>
+const Cove = {
+  publication: "f00063dbacc863b8989ae01916218bc0",
+  contentId: "{{id}}",
+  memberId: "{{@member.uuid}}",
+  memberEmail: "{{@member.email}}",
+  memberName: "{{@member.name}}"
+}
+</script>

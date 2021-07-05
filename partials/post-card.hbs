@@ -14,7 +14,7 @@
       <span class='paid'>{{t 'Paid' }}</span>
       <span class='members'>{{t 'Members' }}</span>
        <span class='public'>{{t 'Public' }}</span> 
-         <div class="c-post-card__tag">{{#get "tags" limit="1"}}{{tags}}{{/get}}</div>
+         {{#get "tags" limit="all"}}{{tags}}{{/get}}
     </div> 
   </div>
 

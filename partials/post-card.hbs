@@ -2,7 +2,7 @@
   <div class='c-post-card__meta'>
     <time class='c-post-card__date' datetime='{{ date format='YYYY-MM-DD' }}' title='{{ date format='DD MMMM YYYY' }}'>{{ date format='DD MMM YYYY' }}</time>
       
-    {{!-- <div class='is-membership
+     <div class='is-membership
                 c-post-card__visibility
                 c-post-card__visibility--{{ visibility }}
                 {{#if @member.paid}}
@@ -10,10 +10,11 @@
                 {{else if @member}}
                   c-post-card__visibility--is-member
                 {{/if}}'>
-      <span class='paid'>{{t 'Paid' }}</span>
+                {{#get "tags" limit="1"}}{{tags}}{{/get}}
+      {{!--<span class='paid'>{{t 'Paid' }}</span>
       <span class='members'>{{t 'Members' }}</span>
-       <span class='public'>{{t 'Public' }}</span> 
-    </div> --}}
+       <span class='public'>{{t 'Public' }}</span> --}}
+    </div>
   </div>
 
   <div class='c-post-card__content'>

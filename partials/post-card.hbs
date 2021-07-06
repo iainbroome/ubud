@@ -10,11 +10,7 @@
                 {{else if @member}}
                   c-post-card__visibility--is-member
                 {{/if}}'>
-                
-      <span class='paid'>{{t 'Paid' }}</span>
-      <span class='members'>{{t 'Members' }}</span>
-       <span class='public'>{{t 'Public' }}</span> 
-         {{#get "tags" limit="1"}}{{tags}}{{/get}}
+{{ tags separator=' / ' limit='1' }}
     </div> 
   </div>
 

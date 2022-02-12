@@ -4,7 +4,7 @@
 
   // Include Gulp & Plugins
   var gulp         = require('gulp'),
-      sass         = require('gulp-sass'),
+      sass         = require('gulp-sass')(require('sass')),
       rtlcss       = require('gulp-rtlcss'),
       cleanCSS     = require('gulp-clean-css'),
       autoprefixer = require('gulp-autoprefixer'),
@@ -13,7 +13,8 @@
       uglify       = require('gulp-uglify'),
       jshint       = require('gulp-jshint'),
       plumber      = require('gulp-plumber'),
-      gutil        = require('gulp-util'),
+      colors       = require('ansi-colors'),
+      beeper       = require('beeper'),
       replace      = require('gulp-replace'),
       size         = require('gulp-size'),
       zip          = require('gulp-zip'),
@@ -23,8 +24,8 @@
   sass.compiler = require('dart-sass');
 
   var onError = function( err ) {
-    console.log('An error occurred:', gutil.colors.magenta(err.message));
-    gutil.beep();
+    console.log('An error occurred:', colors.red(err.message));
+    beeper();
     this.emit('end');
   };
 
@@ -66,7 +67,7 @@
       './bower_components/jquery/dist/jquery.js',
       './bower_components/bootstrap-transition/scripts/transition.js',
       './bower_components/zoom.js/dist/zoom.js',
-      './bower_components/jquery.fitvids/jquery.fitvids.js',
+      './node_modules/tocbot/dist/tocbot.min.js',
       './node_modules/lazysizes/lazysizes.min.js',
       './node_modules/evil-icons/assets/evil-icons.min.js',
       './node_modules/clipboard/dist/clipboard.js',

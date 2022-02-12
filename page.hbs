@@ -9,6 +9,16 @@
     <article class='c-{{ post_class }}'>
       {{> post-header }}
 
+      {{#if access}}
+        {{#if @custom.show_table_of_contents_on_all_pages}}
+          {{> table-of-contents }}
+        {{/if}}
+
+        {{#has tag='#table-of-content'}}
+          {{> table-of-contents }}
+        {{/has}}
+      {{/if}}
+
       <section class='c-content'>
         {{ content }}
       </section>

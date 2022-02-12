@@ -9,7 +9,17 @@
     <article class='c-{{ post_class }}'>
       {{> post-header }}
 
-      <section class='c-content'>
+      {{#if access}}
+        {{#if @custom.show_table_of_contents_on_all_posts}}
+          {{> table-of-contents }}
+        {{/if}}
+
+        {{#has tag='#table-of-content'}}
+          {{> table-of-contents }}
+        {{/has}}
+      {{/if}}
+
+      <section class='c-content {{#unless access}} c-content--has-shadow {{/unless}}'>
         {{ content }}
       </section>
 
@@ -29,10 +39,10 @@
         {{#primary_author}}
           {{> card-author }}
         {{/primary_author}}
-        
+
         {{> subscribe-box }}
 
-        {{!-- {{> disqus }} --}}
+        {{> disqus }}
 
       {{!-- If the post is published for members and paid members and the visitor is not one of those, show the upgrade box --}}
       {{else}}
@@ -43,3 +53,4 @@
 </div>
 
 {{/post}}
+{{> related-posts }}

@@ -6,8 +6,8 @@ routes:
   /:
     data: page.home
     template:
-      # - home
-      - home-image-right
+      - home
+      # - home-image-right
       # - home-image-circle
       # - home-image-center
       # - home-image-wide
